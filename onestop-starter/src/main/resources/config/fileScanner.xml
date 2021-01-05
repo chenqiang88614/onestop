@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--windows 目录为相对项目的相对路径-->
+	<!-- <Path>D:/OMS/ftp/PMS,D:/OMS/backup/PMS;</Path> -->
+	<!-- <IgnoreFilePath>D:/OMS/error/PMS</IgnoreFilePath> -->
+	<!-- <Path>E:/QXXConfig/test,E:/QXXConfig/backup;</Path>-->
+	<Path>C:/YXGL,C:/QXXConfig/backup;C:/ftp/mpss,C:/QXXConfig/backup</Path>
+	<IgnoreFilePath>C:/QXXConfig/error</IgnoreFilePath>
+	<!--Linux-->
+<!-- 	<Path>file/ftpdir/,file/ftpbak/;</Path>
+	<IgnoreFilePath>file/errordir/</IgnoreFilePath> -->
+	<TempSubPath>true</TempSubPath>
+	<TimeInterval>3</TimeInterval>
+	
+	<FileMatcher>
+		<Matcher>
+			<ClassName>com.onestop.fsf.matcher.FileMatcherBySuffix</ClassName>
+			<Flag>true</Flag>
+			<Parm>.PRODORDER</Parm>
+			<Name>PRODORDER</Name>
+		</Matcher>
+		<Matcher>
+			<ClassName>com.onestop.fsf.matcher.FileMatcherBySuffix</ClassName>
+			<Flag>true</Flag>
+			<Parm>.EXTRACTREPORT</Parm>
+			<Name>EXTRACTREPORT</Name>
+		</Matcher>
+		<!-- 忽略列表 -->
+		<Matcher>
+			<ClassName>com.onestop.fsf.matcher.FileMatcherBySuffix</ClassName>
+			<Flag>ignore</Flag>
+			<Parm>.tmp</Parm>
+			<Name>tmp</Name>
+		</Matcher>
+	</FileMatcher>
+	
+	<FileObserver>
+		<Observer>
+			<ClassName>com.onestop.ecosystem.scanner.ProdOrderFileObserver</ClassName>
+			<Flag>true</Flag>
+			<Parm>PRODORDER</Parm>
+			<Matchers>PRODORDER</Matchers>
+		</Observer>
+		<Observer>
+			<ClassName>com.onestop.ecosystem.scanner.ExtractReportFileObserver</ClassName>
+			<Flag>true</Flag>
+			<Parm>EXTRACTREPORT</Parm>
+			<Matchers>EXTRACTREPORT</Matchers>
+		</Observer>
+	</FileObserver>
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="ARCHIVEORDER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FileHeader">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MessageID" type="xs:string"/>
+							<xs:element name="MessageType" type="xs:string"/>
+							<xs:element name="Originator" type="xs:string"/>
+							<xs:element name="Recipient" type="xs:string"/>
+							<xs:element name="MessageCreateTime" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FileBody">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OperatorName" type="xs:string"/>
+							<xs:element name="ArchiveType" type="xs:string"/>
+							<xs:element name="SatelliteID" type="xs:string"/>
+							<xs:element name="OrderID" type="xs:string"/>
+							<xs:element name="TaskID" type="xs:string"/>
+							<xs:element name="ProductLevel" type="xs:string"/>
+							<xs:element name="ProductID" type="xs:string"/>
+							<xs:element name="PixelSpacing" type="xs:string"/>
+							<xs:element name="FileName" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

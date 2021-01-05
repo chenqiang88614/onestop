@@ -1,0 +1,37 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /onestop
+
+spring:
+  profiles:
+    active: prod
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        use_sql_comments: true
+    show-sql: true
+  activiti:
+    database-schema-update: true
+    check-process-definitions: false
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapperxml/*.xml
+#  typeAliasesPackage: com.onestop
+  global-config:
+    db-config:
+      field-strategy: ignored
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+
+
+

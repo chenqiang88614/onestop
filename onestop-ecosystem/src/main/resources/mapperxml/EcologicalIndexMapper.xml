@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.EcologicalIndexMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.EcologicalIndex">
+    <!--@mbg.generated-->
+    <!--@Table public.ei_ecological_index-->
+    <id column="id" jdbcType="LONGVARCHAR" property="id" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="year" jdbcType="LONGVARCHAR" property="year" />
+    <result column="biological_abundance" jdbcType="DOUBLE" property="biologicalAbundance" />
+    <result column="vegetational_cover" jdbcType="DOUBLE" property="vegetationalCover" />
+    <result column="rivers_density" jdbcType="DOUBLE" property="riversDensity" />
+    <result column="land_stress" jdbcType="DOUBLE" property="landStress" />
+    <result column="pollution_load" jdbcType="DOUBLE" property="pollutionLoad" />
+    <result column="environment_restriction" jdbcType="DOUBLE" property="environmentRestriction" />
+    <result column="ecological_regime" jdbcType="DOUBLE" property="ecologicalRegime" />
+    <result column="grade" jdbcType="LONGVARCHAR" property="grade" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, country, code, "year", biological_abundance, vegetational_cover, rivers_density, 
+    land_stress, pollution_load, environment_restriction, ecological_regime, grade
+  </sql>
+</mapper>

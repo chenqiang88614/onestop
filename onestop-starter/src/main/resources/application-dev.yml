@@ -1,0 +1,102 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://172.23.1.81:5432/onestop
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+#    druid:
+#      validationQuery: SELECT 1
+#      initial-size: 8
+#      min-idle: 5
+#      max-active: 10
+#      query-timeout: 6000
+#      transaction-query-timeout: 6000
+#      remove-abandoned-timeout: 1800
+#      testOnBorrow: false
+#      testWhileIdle: true
+#      removeAbandoned: true
+#      logAbandoned: true
+#      poolPreparedStatements: true
+#      maxOpenPreparedStatements: 100
+    hikari:
+      validation-timeout: 600
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: UserHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+    type: com.zaxxer.hikari.HikariDataSource
+  redis:
+    database: 0
+    timeout: 10000
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: 1
+        time-between-eviction-runs: 30000
+#    host: 172.23.1.81
+#    port: 6379
+    cluster:
+      nodes: 172.23.1.71:7001,172.23.1.71:7002,172.23.1.72:7001,172.23.1.72:7002,172.23.1.73:7001,172.23.1.73:7002
+    constant:
+      data-switcher: DATA:SWITCHER
+
+  kafka:
+    bootstrap-servers: 172.23.1.71:9092,172.23.1.72:9092,172.23.1.73:9092
+    # provider
+    producer:
+      bootstrap-servers: 172.23.1.71:9092,172.23.1.72:9092,172.23.1.73:9092
+      retries: 3
+      # 每次批量发送消息数量
+      batch-size: 16384
+      buffer-memory: 3355443232
+      # 指定消息key和消息体的编码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      linger: 1
+    # consumer
+    consumer:
+      bootstrap-servers: 172.23.1.71:9092,172.23.1.72:9092,172.23.1.73:9092
+      # 指定默认消息者group id
+      group-id: test-consumer-group
+      auto-offset-reset: earliest                           #最早未被消费的offset earliest
+      max-poll-records: 1000                              #批量消费一次最大拉取的数据量
+      enable-auto-commit: false                           #是否开启自动提交
+      auto-commit-interval: 1000                          #自动提交的间隔时间
+      session-timeout: 60000                              #连接超时时间
+      max-poll-interval: 1500000                            #手动提交设置与poll的心跳数,如果消息队列中没有消息，等待毫秒后，调用poll()方法。如果队列中有消息，立即消费消息，每次消费的消息的多少可以通过max.poll.records配置。
+      max-partition-fetch-bytes: 15728640                 #设置拉取数据的大小,15M
+      # 指定消息key和消息体的编解码方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    template:
+      default-topic: test
+    listener:
+      batch-listener: true                                #是否开启批量消费，true表示批量消费
+      concurrencys: 3,6,16                                   #设置消费的线程数
+      poll-timeout: 1500                                  #只限自动提交，
+      ack-mode: manual_immediate
+    topic:
+      bussiness-access-data: ACCESS-DATA-16
+      partitions: 0,1,2
+# HBase配置
+HBase:
+  conf:
+    quorum: slave1:2181,slave2:2181,slave3:2181
+#    quorum: 172.23.121.177:2181,172.23.121.174:2181
+    znodeParent: /hbase
+      #如果有更多配置，写在config下，例如：
+      #config:
+      #  key: value
+    #  key: value
+
+Configuration:
+  customer:
+    xsd: E:/onestopconfig
+    fsf:
+      scanner-file: E:/onestopconfig/fileScanner.xml

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.EnviromentRestricationMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.EnviromentRestrication">
+    <!--@mbg.generated-->
+    <!--@Table public.ei_enviroment_restrication-->
+    <id column="id" jdbcType="LONGVARCHAR" property="id" />
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+    <result column="forest" jdbcType="DOUBLE" property="forest" />
+    <result column="grassland" jdbcType="DOUBLE" property="grassland" />
+    <result column="wetland" jdbcType="DOUBLE" property="wetland" />
+    <result column="plowland" jdbcType="DOUBLE" property="plowland" />
+    <result column="construction_land" jdbcType="DOUBLE" property="constructionLand" />
+    <result column="unused_land" jdbcType="DOUBLE" property="unusedLand" />
+    <result column="index" jdbcType="DOUBLE" property="index" />
+    <result column="year" jdbcType="LONGVARCHAR" property="year" />
+    <result column="country_area" jdbcType="DOUBLE" property="countryArea" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, code, country, forest, grassland, wetland, plowland, construction_land, unused_land, 
+    "index", "year", country_area
+  </sql>
+</mapper>

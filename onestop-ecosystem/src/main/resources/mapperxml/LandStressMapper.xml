@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.LandStressMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.LandStress">
+    <!--@mbg.generated-->
+    <!--@Table public.ei_land_stress-->
+    <id column="id" jdbcType="LONGVARCHAR" property="id" />
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+    <result column="severe_erosion" jdbcType="DOUBLE" property="severeErosion" />
+    <result column="moderate_erosion" jdbcType="DOUBLE" property="moderateErosion" />
+    <result column="total_land" jdbcType="DOUBLE" property="totalLand" />
+    <result column="other_land" jdbcType="DOUBLE" property="otherLand" />
+    <result column="year" jdbcType="LONGVARCHAR" property="year" />
+    <result column="index" jdbcType="DOUBLE" property="index" />
+    <result column="country_area" jdbcType="DOUBLE" property="countryArea"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, code, country, severe_erosion, moderate_erosion, total_land, other_land, "year", 
+    "index", country_area
+  </sql>
+</mapper>

@@ -1,0 +1,39 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://172.23.121.192:5432/activiti
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      validation-timeout: 600
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: UserHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+    type: com.zaxxer.hikari.HikariDataSource
+  redis:
+    database: 0
+    timeout: 10000
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+        max-wait: 1
+        time-between-eviction-runs: 30000
+    host: 172.23.1.81
+    port: 6379
+#    cluster:
+#      nodes: 172.23.1.71:7001,172.23.1.71:7002,172.23.1.72:7001,172.23.1.72:7002,172.23.1.73:7001,172.23.1.73:7002
+
+Configuration:
+  customer:
+    xsd: E:/onestopconfig/config
+    fsf:
+      scanner-file: E:/onestopconfig/config/fileScanner.xml
+      ftpfile-backup: E:/onestopconfig/ftpbackup

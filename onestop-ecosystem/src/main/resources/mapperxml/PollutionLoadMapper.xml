@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.PollutionLoadMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.PollutionLoad">
+    <!--@mbg.generated-->
+    <!--@Table public.ei_pollution_load-->
+    <id column="id" jdbcType="LONGVARCHAR" property="id" />
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+    <result column="year" jdbcType="LONGVARCHAR" property="year" />
+    <result column="country_area" jdbcType="DOUBLE" property="countryArea" />
+    <result column="oxygen_demand" jdbcType="DOUBLE" property="oxygenDemand" />
+    <result column="ammonia_nitrogen" jdbcType="DOUBLE" property="ammoniaNitrogen" />
+    <result column="fulfur_dioxide" jdbcType="DOUBLE" property="fulfurDioxide" />
+    <result column="oxynirtide" jdbcType="DOUBLE" property="oxynirtide" />
+    <result column="smoke_dust" jdbcType="DOUBLE" property="smokeDust" />
+    <result column="solid_waste" jdbcType="DOUBLE" property="solidWaste" />
+    <result column="annual_precipitation" jdbcType="DOUBLE" property="annualPrecipitation" />
+    <result column="index" jdbcType="DOUBLE" property="index" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, code, country, "year", country_area, oxygen_demand, ammonia_nitrogen, fulfur_dioxide, 
+    oxynirtide, smoke_dust, solid_waste, annual_precipitation, "index"
+  </sql>
+</mapper>

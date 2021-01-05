@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.ThematicTypeMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.ThematicType">
+    <!--@mbg.generated generated on Thu Sep 05 16:51:38 CST 2019.-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="nameCh" jdbcType="VARCHAR" property="namech" />
+    <result column="nameEn" jdbcType="VARCHAR" property="nameen" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Thu Sep 05 16:51:38 CST 2019.-->
+    id, tag, nameCh, nameEn
+  </sql>
+</mapper>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.CountryCodeMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.CountryCode">
+    <!--@mbg.generated-->
+    <!--@Table public.country_code-->
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+  </resultMap>
+</mapper>

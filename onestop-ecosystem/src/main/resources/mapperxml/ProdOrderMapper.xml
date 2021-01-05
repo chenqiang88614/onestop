@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.ProdOrderMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.ProdOrder">
+    <!--@mbg.generated generated on Thu Sep 05 14:26:54 CST 2019.-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="common_id" jdbcType="BIGINT" property="commonId" />
+    <result column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="operator_name" jdbcType="VARCHAR" property="operatorName" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="urgency_level" jdbcType="INTEGER" property="urgencyLevel" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="tel_mobile" jdbcType="VARCHAR" property="telMobile" />
+    <result column="start_date" jdbcType="TIMESTAMP" property="startDate" />
+    <result column="end_date" jdbcType="TIMESTAMP" property="endDate" />
+    <result column="mark" jdbcType="VARCHAR" property="mark" />
+    <result column="satellite_id" jdbcType="VARCHAR" property="satelliteId" />
+    <result column="product_level" jdbcType="VARCHAR" property="productLevel" />
+    <result column="thematic_type" jdbcType="VARCHAR" property="thematicType" />
+    <result column="scale" jdbcType="VARCHAR" property="scale" />
+    <result column="earth_model" jdbcType="VARCHAR" property="earthModel" />
+    <result column="produce_style" jdbcType="INTEGER" property="produceStyle" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="map_projection" jdbcType="VARCHAR" property="mapProjection" />
+    <result column="cloud_percent" jdbcType="INTEGER" property="cloudPercent" />
+    <result column="scene_id" jdbcType="VARCHAR" property="sceneId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="data_upper_left_long" jdbcType="DOUBLE" property="dataUpperLeftLong" />
+    <result column="data_upper_left_lat" jdbcType="DOUBLE" property="dataUpperLeftLat" />
+    <result column="data_upper_right_long" jdbcType="DOUBLE" property="dataUpperRightLong" />
+    <result column="data_upper_right_lat" jdbcType="DOUBLE" property="dataUpperRightLat" />
+    <result column="data_lower_right_long" jdbcType="DOUBLE" property="dataLowerRightLong" />
+    <result column="data_lower_right_lat" jdbcType="DOUBLE" property="dataLowerRightLat" />
+    <result column="data_lower_left_long" jdbcType="DOUBLE" property="dataLowerLeftLong" />
+    <result column="data_lower_left_lat" jdbcType="DOUBLE" property="dataLowerLeftLat" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="enable" jdbcType="BOOLEAN" property="enable" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Thu Sep 05 14:26:54 CST 2019.-->
+    id, common_id, order_id, operator_name, user_type, urgency_level, user_name, tel_mobile, 
+    start_date, end_date, mark, satellite_id, product_level, thematic_type, "scale", 
+    earth_model, produce_style, region, map_projection, cloud_percent, scene_id, product_id, 
+    data_upper_left_long, data_upper_left_lat, data_upper_right_long, data_upper_right_lat, 
+    data_lower_right_long, data_lower_right_lat, data_lower_left_long, data_lower_left_lat, 
+    "status", update_time, "enable", create_time
+  </sql>
+</mapper>

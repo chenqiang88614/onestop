@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.VegetationalCoverMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.VegetationalCover">
+    <!--@mbg.generated-->
+    <!--@Table public.ei_vegetational_cover-->
+    <id column="id" jdbcType="LONGVARCHAR" property="id" />
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+    <result column="index" jdbcType="DOUBLE" property="index" />
+    <result column="year" jdbcType="LONGVARCHAR" property="year" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, code, country, "index", "year"
+  </sql>
+</mapper>

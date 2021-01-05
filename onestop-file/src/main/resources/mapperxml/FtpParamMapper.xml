@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ftpclient.mapper.FtpParamMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ftpclient.util.FtpParam">
+    <!--@mbg.generated generated on Wed Sep 04 17:14:20 CST 2019.-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="port" jdbcType="INTEGER" property="port" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="folder" jdbcType="VARCHAR" property="folder" />
+    <result column="server_name" jdbcType="VARCHAR" property="serverName" />
+    <result column="alias" jdbcType="VARCHAR" property="alias" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Sep 04 17:14:20 CST 2019.-->
+    id, ip, port, user_name, "password", folder, "server_name", "alias", "name"
+  </sql>
+</mapper>

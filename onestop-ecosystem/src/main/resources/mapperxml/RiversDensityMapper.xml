@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onestop.ecosystem.mapper.RiversDensityMapper">
+  <resultMap id="BaseResultMap" type="com.onestop.ecosystem.entity.RiversDensity">
+    <!--@mbg.generated-->
+    <!--@Table public.ei_rivers_density-->
+    <id column="id" jdbcType="LONGVARCHAR" property="id" />
+    <result column="code" jdbcType="LONGVARCHAR" property="code" />
+    <result column="country" jdbcType="LONGVARCHAR" property="country" />
+    <result column="country_area" jdbcType="DOUBLE" property="countryArea" />
+    <result column="river_length" jdbcType="DOUBLE" property="riverLength" />
+    <result column="river_area" jdbcType="DOUBLE" property="riverArea" />
+    <result column="lake" jdbcType="DOUBLE" property="lake" />
+    <result column="reservior" jdbcType="DOUBLE" property="reservior" />
+    <result column="snowfield" jdbcType="DOUBLE" property="snowfield" />
+    <result column="water_area" jdbcType="DOUBLE" property="waterArea" />
+    <result column="water_resource" jdbcType="DOUBLE" property="waterResource" />
+    <result column="index" jdbcType="DOUBLE" property="index" />
+    <result column="year" jdbcType="LONGVARCHAR" property="year" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, code, country, country_area, river_length, river_area, lake, reservior, snowfield, 
+    water_area, water_resource, "index", "year"
+  </sql>
+</mapper>

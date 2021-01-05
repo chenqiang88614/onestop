@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by qixh (cast503) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="PRODORDER">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FileHeader">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MessageID">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="\d{12}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MessageType" type="xs:string" fixed="PRODORDER"/>
+							<xs:element name="Originator" type="xs:string" fixed="PSS"/>
+							<xs:element name="Recipient" type="xs:string" fixex="TAS"/>
+							<xs:element name="MessageCreateTime">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FileBody">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OrderID" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="20\d{2}\d{2}\d{2}\d{8}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="AUTOMATION" type="xs:string"/>
+							<xs:element name="UserType" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="UrgencyLevel" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="0"/>
+										<xs:enumeration value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="UserName" type="xs:string"/>
+							<xs:element name="TelMobile" type="xs:string"/>
+							<xs:element name="StartDate" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EndDate" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Mark" type="xs:string"/>
+							<xs:element name="SatelliteID" type="xs:string"/>
+							<xs:element name="ProductLevel" type="xs:string"/>
+							<xs:element name="ThematicType" type="xs:string"/>
+							<xs:element name="Scale" type="xs:string"/>
+							<xs:element name="EarthModel" type="xs:string"/>				
+							<xs:element name="ProduceStyle" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="0"/>
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="DataUpperLeftLong" type="xs:string">	
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-180"/>
+										<xs:maxInclusive value="180"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="DataUpperLeftLat" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-90"/>
+										<xs:maxInclusive value="90"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>		
+							<xs:element name="DataUpperRightLong" type="xs:string">	
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-180"/>
+										<xs:maxInclusive value="180"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="DataUpperRightLat" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-90"/>
+										<xs:maxInclusive value="90"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="DataLowerRightLong" type="xs:string">	
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-180"/>
+										<xs:maxInclusive value="180"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="DataLowerRightLat" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-90"/>
+										<xs:maxInclusive value="90"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="DataLowerLeftLong" type="xs:string">	
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-180"/>
+										<xs:maxInclusive value="180"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="DataLowerLeftLat" type="xs:string">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="-90"/>
+										<xs:maxInclusive value="90"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="MapProjection" type="xs:string"/>
+							<xs:element name="CloudPercent" type="xs:number">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="100"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+							<xs:element name="SceneID" type="xs:string"/>
+							<xs:element name="ProductID" type="xs:string"/>	
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
